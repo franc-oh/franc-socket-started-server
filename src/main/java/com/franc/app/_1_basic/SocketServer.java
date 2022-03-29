@@ -41,13 +41,13 @@ public class SocketServer {
             int dataIndex = request.read(data);
             String requestData = new String(data, 0, dataIndex);
 
-            System.out.println("[Socket] Client Message - " +requestData);
+            System.out.println("[Socket] Client Message - " + requestData);
 
             // -- 4-2. 클라이언트에 데이터 송신
             response.write(MESSAGE.getBytes());
             response.flush();
 
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         } finally {
 
